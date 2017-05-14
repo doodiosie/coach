@@ -1,0 +1,63 @@
+$pale-blue: #3498DB
+$blue: #2980B9
+$dark-blue: #2C3E50
+$red: #E74C3C
+$white: #ECF0F1
+$grey: #e2e2e2
+$darkened-grey: darken($grey, 5)
+
+.panel
+    $panel-padding: 10px
+    border:
+        top: $darkened-grey 10px solid
+        bottom: 0
+        left: 0
+        right: 0
+    border-radius: 0
+    margin-top: 20px
+    .title
+        border-bottom: black solid 1px
+        font-size: 1.2em
+        padding: $panel-padding
+        .pull-right
+            display: inline
+            float: right
+    .content
+        padding: $panel-padding
+
+$header-height: 5vh
+.header
+    font-size: $header-height / 2
+    text-align: center
+    padding: $header-height / 8
+    height: $header-height
+
+.btn-primary
+    background-color: $blue
+    &:hover
+        background-color: $dark-blue
+
+body
+    background-color: $grey
+
+$main-height: 100vh - $header-height
+
+.main-container
+    overflow: hidden
+    height: $main-height
+
+.card-form
+    transition: margin-top 250ms linear
+    height: $main-height
+    margin-top: 10px
+
+.cards
+    height: $main-height
+    margin-top: $header-height + 1vh
+    overflow-y: scroll
+
+.form-leaving
+    margin-top: -100vh
+
+.react-datepicker__input-container
+    width: 100%

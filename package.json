@@ -1,0 +1,49 @@
+{
+  "name": "revision-cards",
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "css-loader": "^0.27.3",
+    "enzyme": "^2.8.2",
+    "file-loader": "^0.10.1",
+    "jest": "^20.0.0",
+    "jest-enzyme": "^3.1.0",
+    "mocha": "^3.3.0",
+    "node-sass": "^4.5.1",
+    "nodemon": "^1.11.0",
+    "react-addons-test-utils": "^15.5.1",
+    "sass-loader": "^6.0.3",
+    "sinon": "^2.2.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "apollo-client": "^1.0.1",
+    "immutable": "^3.8.1",
+    "material-ui": "^0.18.0",
+    "next": "^2.1.0",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-apollo": "^1.0.0",
+    "react-datepicker": "^0.46.0",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "yarn build && scp -r .next static package.json charlie@178.62.37.154:apps/revision/client",
+    "test": "mocha --require test/setup.js --compilers js:babel-register",
+    "tdd": "yarn test -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
